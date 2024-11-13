@@ -1,12 +1,10 @@
-import Navbar from './components/navbar/Navbar'
-import './App.css'
-
 function App() {
-    return ( 
-      <>
-        <Navbar />
-      </>
-    )
+  return (
+    <div className="flex flex-col">
+        <div></div>
+        <div></div>
+    </div>
+  )
 }
 
 export default App
