@@ -1,0 +1,14 @@
+#login:hover svg path{
+    fill: white;
+}
+
+#arrow{
+    transition: all 0.3s ease-in-out;
+}
+#login:hover #arrow {
+    transform: rotate(180deg);
+}
+
+#login:hover+#submenu{
+    display: block;
+}
