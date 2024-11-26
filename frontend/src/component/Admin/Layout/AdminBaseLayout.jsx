@@ -7,7 +7,7 @@ function AdminBaseLayout(){
                 <div>
                     <Sidebar />
                 </div>
-                <div className="w-full">
+                <div className="w-full p-5">
                     <Outlet />
                 </div>
         </div>

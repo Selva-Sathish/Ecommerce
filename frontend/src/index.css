@@ -14,6 +14,19 @@
         @apply bg-[#fafafa] ;
     }
 
+    /* Table */
+    table{
+        @apply w-full text-sm text-center ;
+    }
+
+    td,th{
+        @apply py-2 justify-center;
+    }
+
+    tr{
+        @apply border-b-[1px]
+    }
+
     .panel {
         @apply relative rounded-md bg-white p-5 shadow ;
     }
@@ -50,6 +63,10 @@
 
     .btn-primary{
         @apply text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ;
+    }
+
+    .btn-danger{
+        @apply text-white bg-danger hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-100 font-medium rounded-[7px] text-sm px-5 py-2.5 text-center me-2 mb-2 ;
     }
 
 

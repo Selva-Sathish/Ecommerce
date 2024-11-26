@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Axios } from "../../../axios/AxiosInstance";
-// import axios from "axios";
+import SavedIcon from "./assets/Saved";
+
 
 function AddProduct(){
     const [Image, setImage] = useState(null);
@@ -28,6 +29,11 @@ function AddProduct(){
     }
     return (
         <div className="p-2">
+            <div className="flex flex-col justify-end relative animate-bounce ">
+                <div className="bg-primary p-2 text-white flex gap-2 "> <SavedIcon/> Saved Successfully</div>
+                <div className="bg-[#cfa2a2] h-[0.5rem] "></div>
+            </div>
+
             <h1 className="text-lg font-bold  p-2">Add Product</h1>
             <form method="post" className="panel" encType="multipart/form-data" onSubmit={handleForm}>
                 <div className="mt-4 p-2 grid grid-cols-3 gap-4">
