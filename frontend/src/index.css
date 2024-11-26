@@ -19,12 +19,24 @@
         @apply w-full text-sm text-center ;
     }
 
+    thead, tfoot{
+        @apply bg-slate-200;
+    }
+
     td,th{
         @apply py-2 justify-center;
     }
 
     tr{
         @apply border-b-[1px]
+    }
+
+    tr:hover{
+        @apply  bg-slate-50;
+    }
+
+    #prev,#next{
+        @apply bg-blue-700 px-2 py-1 text-white rounded-[6px];
     }
 
     .panel {
@@ -62,7 +74,7 @@
     }
 
     .btn-primary{
-        @apply text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ;
+        @apply text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-100 font-medium rounded-[7px] text-sm px-5 py-2.5 text-center me-2 mb-2 ;
     }
 
     .btn-danger{

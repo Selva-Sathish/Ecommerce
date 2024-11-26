@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Axios } from "../../../axios/AxiosInstance";
 import SavedIcon from "./assets/Saved";
-
-
+import BackIcon from "./assets/Back";
+import {NavLink} from 'react-router-dom'
 function AddProduct(){
     const [Image, setImage] = useState(null);
     const [Description, setDescription] = useState("");
@@ -24,14 +24,29 @@ function AddProduct(){
                 'Content-Type': 'multipart/form-data',
             }
         })
-        .then(data => console.log(data))
+        .then(data => {
+            if (data.status == 201){
+                const successmsg = document.getElementById("success");
+                successmsg.classList.toggle('hidden');
+
+                setTimeout(()=>{
+                    successmsg.classList.toggle("hidden");
+                },5000)
+            }
+        })
         .catch(e => console.log("Network Err", e));
     }
     return (
         <div className="p-2">
-            <div className="flex flex-col justify-end relative animate-bounce ">
-                <div className="bg-primary p-2 text-white flex gap-2 "> <SavedIcon/> Saved Successfully</div>
-                <div className="bg-[#cfa2a2] h-[0.5rem] "></div>
+            <NavLink to="/admin/showproduct/">
+                <button type="button" className="btn-danger flex"><BackIcon /> Back</button>
+            </NavLink>
+
+            <div id="success" className="hidden">
+                <div className="flex flex-col justify-end relative animate-bounce">
+                    <div className="bg-primary p-2 text-white flex gap-2"> <SavedIcon/> Saved Successfully</div>
+                    <div className="bg-slate-300 h-[0.5rem] w-full absolute animate-load bottom"></div>
+                </div>
             </div>
 
             <h1 className="text-lg font-bold  p-2">Add Product</h1>

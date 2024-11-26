@@ -61,6 +61,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS: bool = True
 
 
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
@@ -110,6 +111,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
+}
 
 
 # Internationalization
