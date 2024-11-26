@@ -10,9 +10,12 @@
 }
 
 @layer components{
-    .panel{
-        box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.1);
-        border-radius: 4px;
+    body {
+        @apply bg-[#fafafa] ;
+    }
+
+    .panel {
+        @apply relative rounded-md bg-white p-5 shadow ;
     }
 
     .form-input{
@@ -23,7 +26,6 @@
         &:focus{
             outline-color: #7dd3fc;
         } 
-        /* border-[2px] py-1 rounded-[6px] focus:outline-sky-300 pl-2 */
     }
 
     .file{
@@ -38,8 +40,17 @@
             border-radius: 5px;
             border: none;
         }
+        &:focus{
+            border: 2px solid #7dd3fc;
+        }
         &:hover{
             border: 2px solid #7dd3fc;
         }
     }
+
+    .btn-primary{
+        @apply text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ;
+    }
+
+
 }
