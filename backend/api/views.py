@@ -13,3 +13,8 @@ class ShowListProductAdd(generics.CreateAPIView):
 class ShowListProductView(generics.ListAPIView):
     queryset = ShowListProduct.objects.all()
     serializer_class = ShowListProductSerializer
+
+class ShowListProductDelete(generics.DestroyAPIView):
+    queryset = ShowListProduct.objects.all()
+    serializer_class = ShowListProductSerializer
+    lookup_field = 'pk'

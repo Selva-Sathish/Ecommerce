@@ -20,7 +20,7 @@ export default {
         },
       },
       animation: {
-        load : 'load 4s ease-in-out'
+        load : 'load 2s ease-in-out'
       }
     },
   },

@@ -31,14 +31,20 @@ function AddProduct(){
 
                 setTimeout(()=>{
                     successmsg.classList.toggle("hidden");
-                },5000)
+                },2000);
+                setLink("");
+                setImage("");
+                setDescription("");
+                setTimeout(()=>{
+                    document.getElementById("back").click()
+                },2000)
             }
         })
         .catch(e => console.log("Network Err", e));
     }
     return (
         <div className="p-2">
-            <NavLink to="/admin/showproduct/">
+            <NavLink to="/admin/showproduct/" id="back">
                 <button type="button" className="btn-danger flex"><BackIcon /> Back</button>
             </NavLink>
 
