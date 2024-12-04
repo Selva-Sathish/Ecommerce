@@ -18,6 +18,7 @@ class ShowListProductDelete(generics.DestroyAPIView):
     queryset = ShowListProduct.objects.all()
     serializer_class = ShowListProductSerializer
     lookup_field = 'pk'
+
 from rest_framework.generics import mixins
 class ShowListProductUpdate(mixins.UpdateModelMixin, generics.GenericAPIView):
     queryset = ShowListProduct.objects.all()
